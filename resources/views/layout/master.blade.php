@@ -31,13 +31,15 @@
             @if(!auth()->check())
             <form class="form-inline my-2 my-lg-0" action="/user/login" method="post">
                 @csrf
-                <input class="form-control mr-1" placeholder="아이디" name="email">
-                <input class="form-control mr-1" placeholder="비밀번호" name="password">
+                <input type="email" class="form-control mr-1" placeholder="아이디" name="email">
+                <input type="password" class="form-control mr-1" placeholder="비밀번호" name="password">
                 <button class="btn btn-outline-success my-2 my-sm-0 mr-1" type="submit">로그인</button>
                 <a href="/user/register" class="btn btn-outline-primary">회원가입</a>
             </form>
             @else
-            <button class="btn btn-outline-success">{{auth()->user()->name}}</button>
+            <button class="btn btn-outline-success">{{auth()->user()->name}}
+            <span class="badge badge-light">{{ auth()->user()->boards()->count() }}</span></button>
+
             @endif
         </div>
 
