@@ -20,19 +20,19 @@
             <label for="name" class="col-sm-2 col-form-label">이름</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control {{ $errors->has('name') ? 'is-invalid' : ''}}" id="name" placeholder="이름 입력" name="name"
-                       value="{{ old('name') }}">
-            </div>
-            <div class="invalid-feedback">
-                {!! $errors->first('name', "<span class='form-error'> :message </span>") !!}
+                       value="{{ old('name') }}" >
+                <div class="invalid-feedback">
+                    {!! $errors->first('name', "<span class='form-error'> :message </span>") !!}
+                </div>
             </div>
         </div>
         <div class="form-group row">
             <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
             <div class="col-sm-10">
                 <input type="password" class="form-control {{ $errors->has('password') ? 'is-invalid' : ''}}" id="inputPassword" placeholder="비밀번호 입력" name="password">
-            </div>
-            <div class="invalid-feedback">
-                {!! $errors->first('password', "<span class='form-error'> :message </span>") !!}
+                <div class="invalid-feedback">
+                    {!! $errors->first('password', "<span class='form-error'> :message </span>") !!}
+                </div>
             </div>
         </div>
         <div class="form-group row">

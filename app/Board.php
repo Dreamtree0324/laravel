@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Board extends Model
 {
     protected $fillable = [
-        'title', 'content', 'writer',
+        'title', 'content', 'writer', 'file',
     ];
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo('App\User', 'writer', 'id');
-
     }
 }

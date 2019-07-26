@@ -1,6 +1,7 @@
 @extends('layout/master')
 
 @section('content')
+    <img src="/image/Desert.jpg" alt="">
     <h2>게시글 리스트</h2>
     <table class="table table-striped">
         <tr>
